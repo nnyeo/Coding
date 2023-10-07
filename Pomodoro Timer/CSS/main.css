@@ -1,6 +1,6 @@
 .container {
   margin: 0 auto;
-  max-with: 400px;
+  max-width: 400px;
   text-align: center;
   padding: 20px;
   font-family: "Roboto", sans-serif;
