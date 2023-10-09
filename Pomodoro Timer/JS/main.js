@@ -24,7 +24,6 @@ function startTimer(){
       alert("Time's up!!");
       timeLeft = 1500;
     }
-    
   }, 1000);
 }
 
@@ -37,8 +36,6 @@ function resetTimer(){
   timeLeft = 1500;
   updateTimer();
 }
-
-
 
 startEl.addEventListener("click", startTimer)
 
