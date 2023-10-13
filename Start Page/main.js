@@ -9,6 +9,10 @@ var myDate = new Date();
     var string_month = months[int_month]
     var string_day = weekday[int_day]
 
+    let interval;
+    let formattedTime = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+    let formattedDate = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+
     var suffix;
     if (int_day === 1 || int_day === 21 || int_day === 31) {
         suffix = 'st';
@@ -18,11 +22,7 @@ var myDate = new Date();
         suffix = 'rd';
     } else {
         suffix = 'th';
-    }
-
-    var seconds = myDate.getSeconds();
-    var minutes = myDate.getMinutes();
-    var hours = myDate.getHours();
+    }   
 
     if (seconds < 10) {
         seconds = '0' + seconds;
@@ -34,5 +34,11 @@ var myDate = new Date();
         hours = '0' + hours;
     }
 
-    var myTime = hours + ':' + minutes + ':' + seconds
+    var myTime = hours + ':' + minutes + ':' + seconds;
     var myDate = string_day + ', ' + string_month + ' ' + int_day + suffix + ', ' + string_year
+
+     interval = setInterval(() => {
+        var seconds = myDate.getSeconds();
+        var minutes = myDate.getMinutes();
+        var hours = myDate.getHours();
+    }
